@@ -1,0 +1,24 @@
+[project]
+name = "chatbot"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "HieuLe0301", email = "ngochieule36@gmail.com" }
+]
+requires-python = ">=3.11"
+dependencies = [
+    "fonttools>=4.68.0",
+    "pypdf>=7.1.0",
+    "requests>=2.34.2",
+]
+
+[project.scripts]
+chatbot = "chatbot:main"
+
+[build-system]
+requires = ["uv_build>=0.13.7,<0.14.0"]
+build-backend = "uv_build"
+
+[tool.uv.build-backend]
+module-name = ["pipeline", "llm"]
